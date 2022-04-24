@@ -43,7 +43,7 @@ function CreateAccount() {
           type="input"
           className="form-control"
           id="name"
-          placeholder="*Required*"
+          placeholder="*Required"
           value={name}
           onChange={(e) => {
             setName(e.currentTarget.value);
@@ -57,7 +57,7 @@ function CreateAccount() {
           type="input"
           className="form-control"
           id="email"
-          placeholder="*Required*"
+          placeholder="*Required"
           value={email}
           onChange={(e) => {
             setEmail(e.currentTarget.value);
@@ -71,7 +71,7 @@ function CreateAccount() {
           type="password"
           className="form-control"
           id="password"
-          placeholder="*Minimum 8 characters*"
+          placeholder="*Minimum 8 characters"
           value={password}
           onChange={(e) => {
             setPassword(e.currentTarget.value);
