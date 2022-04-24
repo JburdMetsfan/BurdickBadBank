@@ -1,9 +1,9 @@
 function NavBar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark primary">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <a className="navbar-brand" href="#">
-          <span title="Home">BadBank</span>
+          <span title="Home">Bad Bank Home Page</span>
         </a>
         <button
           className="navbar-toggler"
@@ -20,7 +20,7 @@ function NavBar() {
           className="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
-          <ul className="navbar-nav">
+          <ul className="navbar-nav nav-pills">
             <li className="nav-item">
               <a className="nav-link" href="#/CreateAccount/">
                 <span title="Click Here if you need to create an account">Create Account</span>

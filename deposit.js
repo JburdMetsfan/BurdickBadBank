@@ -39,12 +39,12 @@ function Deposit() {
         <span className="balance-information">Balance ${balance} </span>
         <br />
         <br />
-        Deposit Amount
+        Deposit Amount $
         <input
           type="input"
           className="form-control"
           id="deposit"
-          placeholder="Deposit Amount"
+          placeholder="Enter dollar amount to deposit here"
           value={deposit}
           onChange={(e) => {
             setDeposit(e.currentTarget.value);
@@ -71,13 +71,13 @@ function Deposit() {
         <span className="balance-information">Account Balance ${balance}</span>
         <br />
         <br />       
-        <h5>Successful Deposit</h5>
+        <h5>Successful Deposit!</h5>
         <button
           type="submit"
           className="btn btn-light"
           onClick={() => props.setShow(true)}
         >
-          Make Another Deposit
+          OK!
         </button>
       </>
     );

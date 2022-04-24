@@ -40,12 +40,12 @@ function Withdraw() {
         <span className="balance-information">Account Balance ${balance}</span>
         <br />
         <br />
-        Withdraw Amount
+        Withdrawal Amount $
         <input
           type="input"
           className="form-control"
           id="withdraw"
-          placeholder="Withdrawal Amount"
+          placeholder="Enter dollar amount to withdraw here"
           value={withdraw}
           onChange={(e) => {
             setWithdraw(e.currentTarget.value);
@@ -72,13 +72,13 @@ function Withdraw() {
         <span className="balance-information">Balance ${balance}</span>
         <br />
         <br />
-        <h5>Successful Withdrawal</h5>
+        <h5>Successful Withdrawal!</h5>
         <button
           type="submit"
           className="btn btn-light"
           onClick={() => props.setShow(true)}
         >
-          Withdraw Again
+          OK!
         </button>
       </>
     );
@@ -88,18 +88,18 @@ function Withdraw() {
 
   function validate(withdraw, balance) {
     if (isNaN(withdraw)) {
-      setStatus("Error: did not enter a valid number");
-      setTimeout(() => setStatus(""), 3000);
+      setStatus("Error: Please enter a valid number value");
+      setTimeout(() => setStatus(""), 5000);
       return false;
     }
     if (withdraw > balance) {
-      setStatus("Error: Insuffienct funds");
-      setTimeout(() => setStatus(""), 8000);
+      setStatus("Error: Balance too low, please enter a different amount");
+      setTimeout(() => setStatus(""), 5000);
       return false;
     }
     if (withdraw < 1) {
       setStatus("Error: Must withdraw $1 or higher");
-      setTimeout(() => setStatus(""), 8000);
+      setTimeout(() => setStatus(""), 5000);
       return false;
     }
     return true;
